@@ -7,11 +7,15 @@
     z-index: 999;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 .searchbar-div{
     width: 33.33%;
     height: 70%;
     
+}
+
+.logo-div{
+    margin-left: 30px;
 }

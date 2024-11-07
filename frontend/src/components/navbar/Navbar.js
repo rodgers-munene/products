@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className='navbar'>
        <div className='logo-div'>
-        Logo
+        <h1> PickiFy</h1>
        </div>
        <div className='searchbar-div'>
           <Searchbar />
