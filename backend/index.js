@@ -2,13 +2,15 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const db = require('./config/db')
+const cors = require('cors')
 
 // CREATING THE APP AND THE PORT NUMBER FOR COMMUNICATION
 const app = express()
-const PORT = 3000
+const PORT = 5000
 
 // MIDDLEWARE
 app.use(bodyParser.json())
+app.use(cors())
 
 
 // START SERVER
