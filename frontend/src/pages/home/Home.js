@@ -9,8 +9,6 @@ const Home = () => {
     const fetchData = async () =>{
       const data = await FetchProducts()
       setProducts(data)
-
-      console.log(data)
     }
 
     fetchData()
