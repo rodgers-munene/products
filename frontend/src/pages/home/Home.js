@@ -19,11 +19,16 @@ const Home = () => {
     <div className='home-container'>
       {products.length > 0 ? (
         products.map(product => (
-          <div key={product.id} >
-            <div>
+          <div key={product.id} className='product-div'>
+
+            <div className='image-div'>
+
               <img src={product.image_link} alt={product.title} width={100} height={100}></img>
-              <h4 className='product-title'>{product.title}</h4>
+              
+              <p className='product-title'>{product.title}</p>
+           
             </div>
+        
          </div>
         ))
       ): (

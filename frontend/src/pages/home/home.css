@@ -1,7 +1,38 @@
 .home-container{
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 30px;
 }
-/* .product-title{
+
+.product-div{
+    position: relative;
+    border: 1px solid grey;
+    width: 170px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.product-div:hover{
+    scale: 1.05;
+}
+
+.product-title{
     font-size: small;
-} */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    padding: 5px;
+}
+.image-div{
+    width: fill;
+    height: fill;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
