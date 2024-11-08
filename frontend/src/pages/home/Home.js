@@ -15,7 +15,7 @@ const Home = () => {
   },[])
   return (
     <div className='home-container'>
-      {products.length > 0 ? (
+      {products && products.length > 0 ? (
         products.map(product => (
           <div key={product.id} className='product-div'>
 

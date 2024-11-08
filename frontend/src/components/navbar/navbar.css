@@ -19,3 +19,23 @@
 .logo-div{
     margin-left: 30px;
 }
+
+.navbar-buttons{
+    width: 100px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar-buttons button{
+    padding: 6px 8px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: none;
+}
+
+.navbar-buttons button:hover{
+    scale: 1.15;
+}

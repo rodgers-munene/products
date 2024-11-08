@@ -1,6 +1,7 @@
 import React from 'react'
 import './navbar.css'
 import Searchbar from '../searchbar/Searchbar'
+import { UserIcon, ShoppingCartIcon } from '@heroicons/react/solid'
 
 const Navbar = () => {
   return (
@@ -12,7 +13,9 @@ const Navbar = () => {
           <Searchbar />
        </div>
        <div className='navbar-buttons'>
-          NavBar buttons
+          <button><ShoppingCartIcon width={25}  height={23}/></button>
+          <button><UserIcon width={25} height={23} className='user-icon'/></button>
+          {/* <button></button> */}
        </div>
     </div>
   )
