@@ -17,7 +17,11 @@
 }
 
 .logo-div{
-    margin-left: 30px;
+    margin-left: 20px;
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar-buttons{

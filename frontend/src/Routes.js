@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from "./pages/home/Home";
-import Products from "./pages/Products";
-import NotFound from "./pages/NotFound";
+import Products from "./pages/product/Products";
+import NotFound from "./pages/not-found/NotFound";
 import Layout from "./components/Layout";
 
 
