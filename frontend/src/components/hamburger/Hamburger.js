@@ -1,16 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import './hamburger.css'
+import { SidebarContext } from '../../containers/SidebarContext'
 
 const Hamburger = () => {
-    const[isOpen, setIsOpen] = useState(false)
+    const {isSidebarOpen,  toggleSidebar } = useContext(SidebarContext)
 
-    const toggleMenu = () =>{
-        setIsOpen(!isOpen)
-    }
     
   return (
     <div>
-        <button className={`hamburger ${isOpen? 'open' : ''}`} onClick={toggleMenu}>
+        <button className={`hamburger ${isSidebarOpen? 'open' : ''}`} onClick={toggleSidebar}>
             <span></span>
             <span></span>
             <span></span>
