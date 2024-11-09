@@ -4,6 +4,8 @@ import { SidebarProvider } from './containers/SidebarContext';
 
 
 function App() {
+
+
   return (
     <SidebarProvider>
       <div className="App">

@@ -1,23 +1,43 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import FetchProducts from '../../lib/data'
 import './home.css'
+import { SidebarContext } from '../../containers/SidebarContext'
 
 const Home = () => {
   const [products, setProducts] = useState([])
+  const { isSidebarOpen, toggleSidebar } = useContext(SidebarContext)
+  
 
   useEffect(() =>{
     const fetchData = async () =>{
       const data = await FetchProducts()
       setProducts(data)
     }
+    if(isSidebarOpen){
+      document.body.style.overflowY = 'hidden'
+    }else{
+      document.body.style.overflowY = 'auto'
+    }
 
-    fetchData()
-  },[])
+    return () => { 
+      
+      fetchData()
+    }
+    
+  },[isSidebarOpen])
+
+  const handleToggle = () =>{
+    if(isSidebarOpen){
+      toggleSidebar()
+    }
+  }
+
+
   return (
-    <div className='home-container'>
+    <div className={`home-container ${isSidebarOpen? 'home-container_blur':''}`} onClick={handleToggle} >
       {products && products.length > 0 ? (
         products.map(product => (
-          <div key={product.id} className='product-div'>
+          <div key={product.id} className="product-div" >
 
             <div className='image-div'>
 
